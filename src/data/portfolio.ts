@@ -13,24 +13,79 @@ export const profile = {
 I deliver clean, maintainable code and user-focused solutions — from REST APIs and authentication systems to responsive front-end interfaces. I am committed to professional excellence and continuous learning in software development.`,
 }
 
-export const skills = [
+export type SkillGroup = {
+  category: string
+  description: string
+  items: string[]
+}
+
+export const coreStack = [
+  "MongoDB",
+  "Express.js",
+  "React",
+  "Node.js",
+  "TypeScript",
+  "MySQL",
+  "REST APIs",
+] as const
+
+export const skills: SkillGroup[] = [
   {
     category: "MERN Stack",
+    description: "Full-stack JavaScript applications end to end",
     items: ["MongoDB", "Express.js", "React", "Node.js", "REST APIs", "JWT Auth"],
   },
   {
     category: "Languages",
+    description: "Backend, scripting, and systems programming",
     items: ["JavaScript", "TypeScript", "Python", "Java", "C", "C#"],
   },
   {
     category: "Databases",
+    description: "Relational and document data modeling",
     items: ["MongoDB", "MySQL", "SQL Queries", "Schema Design", "Data Modeling"],
   },
   {
-    category: "Tools & Practices",
+    category: "Tools & Workflow",
+    description: "Version control, styling, and delivery",
     items: ["Git", "GitHub", "Vite", "Tailwind CSS", "Postman", "Agile"],
   },
 ]
+
+export type Education = {
+  degree: string
+  institution: string
+  period: string
+  type: "Professional" | "Degree" | "Certificate"
+}
+
+export const education: Education[] = [
+  {
+    degree: "IT & Professional Development",
+    institution: "JDC Free IT Center",
+    period: "2022 – 2024",
+    type: "Professional",
+  },
+  {
+    degree: "BBA (Honours)",
+    institution: "Iqra University",
+    period: "2017 – 2020",
+    type: "Degree",
+  },
+  {
+    degree: "CIT — Certificate in Information Technology",
+    institution: "ABC Computers",
+    period: "2014 – 2015",
+    type: "Certificate",
+  },
+]
+
+export const highlights = [
+  { value: "4+", label: "Live projects" },
+  { value: "MERN", label: "Core stack" },
+  { value: "Full-stack", label: "Specialization" },
+  { value: "Pakistan", label: "Location" },
+] as const
 
 export type Project = {
   title: string
@@ -87,10 +142,3 @@ export const projects: Project[] = [
   },
 ]
 
-export const education = [
-  {
-    degree: "Bachelor's in Computer Science / Software Engineering",
-    institution: "Your University Name",
-    year: "2020 – 2024",
-  },
-]
