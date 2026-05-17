@@ -20,7 +20,12 @@ export default function Contact() {
               >
                 {profile.email}
               </a>
-              <p className="text-base text-neutral-400 sm:text-lg md:text-xl lg:text-2xl">{profile.phone}</p>
+              <a
+                href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                className="block text-base text-neutral-400 transition hover:text-white sm:text-lg md:text-xl lg:text-2xl"
+              >
+                {profile.phone}
+              </a>
               <p className="text-base text-neutral-400 sm:text-lg md:text-xl lg:text-2xl">{profile.location}</p>
             </div>
           </div>

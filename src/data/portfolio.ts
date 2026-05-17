@@ -3,8 +3,8 @@ export const profile = {
   fullName: "Arman",
   title: "MERN Stack Developer",
   subtitle: "Full-Stack Developer · Database Specialist",
-  email: "arman@email.com",
-  phone: "+92 300 0000000",
+  email: "armanaminjankabeer@gmail.com",
+  phone: "+923013339252",
   location: "Pakistan",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
@@ -32,30 +32,58 @@ export const skills = [
   },
 ]
 
-export const projects = [
+export type Project = {
+  title: string
+  description: string
+  tech: string[]
+  images: string[]
+  url?: string
+}
+
+export const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "SwiftZone",
     description:
-      "Full-stack online store with React front-end, Node.js API, MongoDB database, and secure payment integration.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
+      "Corporate software solutions landing page with dark theme, hero animations, and service-focused layout for a modern dev agency brand.",
+    tech: ["React", "Tailwind CSS", "Responsive UI"],
+    images: [
+      "/SwiftZone/swiftzone1.png",
+      "/SwiftZone/swiftzone2.png",
+      "/SwiftZone/swiftzone3.png",
+    ],
+    url: "https://swift-zone.vercel.app/",
   },
   {
-    title: "Task Management System",
+    title: "XWallet — Crypto",
     description:
-      "Collaborative project management app with real-time updates, role-based access, and RESTful API architecture.",
-    tech: ["MERN", "JWT", "Socket.io"],
+      "Web3 crypto wallet marketing site with clean product hero, download CTAs, and mobile-first wallet showcase visuals.",
+    tech: ["React", "Vite", "Web3 UI"],
+    images: ["/Crypto/crypto1.png", "/Crypto/crypto2.png", "/Crypto/crypto3.png"],
+    url: "https://crypto-wallet-two-sooty.vercel.app/",
   },
   {
-    title: "Student Records Portal",
+    title: "Buddies — Cloth Brand",
     description:
-      "MySQL-backed administrative system for managing student data, grades, and reports with a clean dashboard UI.",
-    tech: ["MySQL", "React", "Node.js"],
+      "Full e-commerce storefront for kids and women's fashion with category navigation, hero promos, and shop-ready product layout.",
+    tech: ["React", "E-Commerce", "Tailwind CSS"],
+    images: [
+      "/Buddies/buddies1.png",
+      "/Buddies/buddies2.png",
+      "/Buddies/buddies3.png",
+    ],
+    url: "https://cloth-brand-tau.vercel.app/",
   },
   {
-    title: "Python Automation Suite",
+    title: "Beauty Blend",
     description:
-      "Collection of automation scripts for data processing, file handling, and workflow optimization.",
-    tech: ["Python", "Pandas", "Automation"],
+      "Beauty & cosmetics brand website with makeup and skincare categories, launch banner, and elegant product-focused hero design.",
+    tech: ["React", "UI/UX", "Responsive Design"],
+    images: [
+      "/Beauty_Blend/beauty1.png",
+      "/Beauty_Blend/beauty2.png",
+      "/Beauty_Blend/beauty3.png",
+      "/Beauty_Blend/beauty4.png",
+    ],
   },
 ]
 
