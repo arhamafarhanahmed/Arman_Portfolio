@@ -35,7 +35,155 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: #171717;
+  color: #fafafa;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-neutral-900 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-neutral-800 hover:shadow-xl sm:text-base;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-neutral-300 bg-white px-7 py-3.5 text-sm font-bold text-neutral-900 shadow-sm transition hover:border-neutral-900 sm:text-base;
+  }
+
+  .section-light {
+    @apply bg-white;
+  }
+
+  .section-muted {
+    @apply bg-neutral-50;
+  }
+
+  .section-dark {
+    @apply bg-neutral-950 text-white;
+  }
+
+  .skill-card {
+    @apply relative flex min-w-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-neutral-700/90 bg-neutral-800 p-6 shadow-lg transition-all duration-300 ease-out will-change-transform sm:p-8;
+    @apply hover:-translate-y-2.5 hover:border-neutral-500 hover:shadow-2xl hover:shadow-black/30;
+    @apply active:translate-y-0 active:scale-[0.99] active:shadow-lg;
+  }
+
+  .skill-card-grid {
+    @apply pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:1.25rem_1.25rem] opacity-60 transition-opacity duration-300;
+  }
+
+  .skill-card:hover .skill-card-grid {
+    @apply opacity-100;
+  }
+
+  .skill-card::before {
+    content: "";
+    @apply pointer-events-none absolute inset-y-4 left-0 w-1 rounded-r-full opacity-80 transition-all duration-300;
+  }
+
+  .skill-card--mern::before {
+    @apply bg-emerald-400;
+  }
+
+  .skill-card--lang::before {
+    @apply bg-sky-400;
+  }
+
+  .skill-card--db::before {
+    @apply bg-amber-400;
+  }
+
+  .skill-card--tools::before {
+    @apply bg-violet-400;
+  }
+
+  .skill-card:hover::before {
+    @apply inset-y-3 w-1.5 opacity-100 shadow-[0_0_12px_currentColor];
+  }
+
+  .skill-card::after {
+    content: "";
+    @apply pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full blur-3xl transition-all duration-500;
+  }
+
+  .skill-card--mern::after {
+    @apply bg-emerald-500/10 group-hover:bg-emerald-500/20;
+  }
+
+  .skill-card--lang::after {
+    @apply bg-sky-500/10 group-hover:bg-sky-500/20;
+  }
+
+  .skill-card--db::after {
+    @apply bg-amber-500/10 group-hover:bg-amber-500/20;
+  }
+
+  .skill-card--tools::after {
+    @apply bg-violet-500/10 group-hover:bg-violet-500/20;
+  }
+
+  .skill-card:hover::after {
+    @apply -right-6 -top-6;
+  }
+
+  .skill-pill {
+    @apply border border-white/10 bg-white/10 ring-1 ring-white/5 transition-all duration-300;
+  }
+
+  .skill-card:hover .skill-pill {
+    @apply -translate-y-0.5 border-white/20 bg-white/15 ring-white/15;
+  }
+
+  .skills-stats {
+    @apply backdrop-blur-sm;
+  }
+
+  .skills-core-strip {
+    @apply relative overflow-hidden;
+  }
+
+  .skills-core-strip::before {
+    content: "";
+    @apply pointer-events-none absolute -left-20 top-0 h-full w-40 rotate-12 bg-gradient-to-r from-emerald-500/10 to-transparent;
+  }
+
+  .skill-card-shell {
+    @apply rounded-2xl p-px transition-all duration-300;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.04) 50%,
+      rgba(255, 255, 255, 0.08)
+    );
+  }
+
+  .skill-card-shell--featured:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(52, 211, 153, 0.55),
+      rgba(56, 189, 248, 0.35),
+      rgba(167, 139, 250, 0.45)
+    );
+    @apply shadow-lg shadow-emerald-500/10;
+  }
+
+  .skill-card-shell .skill-card {
+    @apply rounded-[calc(1rem-1px)] border-0;
+  }
+
+  .skill-card--featured {
+    @apply bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900;
+  }
+
+  .skill-watermark {
+    @apply pointer-events-none absolute -right-2 top-1/2 -translate-y-1/2 select-none font-black leading-none tracking-tighter text-white/[0.04] sm:text-[5.5rem] lg:text-[7rem];
+  }
+
+  .skill-card--featured:hover .skill-watermark {
+    @apply text-white/[0.07] transition-colors duration-500;
+  }
 }
