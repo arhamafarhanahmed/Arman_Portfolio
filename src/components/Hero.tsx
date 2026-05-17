@@ -127,13 +127,9 @@ export default function Hero() {
               />
               <div className="relative overflow-hidden rounded-3xl border-4 border-white bg-neutral-200 shadow-2xl">
                 <img
-                  src="/profile.png"
+                  src="/Arman.jpeg"
                   alt={profile.fullName}
                   className="aspect-[4/5] w-full object-cover object-top"
-                  onError={(e) => {
-                    e.currentTarget.src =
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&crop=face"
-                  }}
                 />
               </div>
               <div className="absolute -bottom-4 left-3 right-3 rounded-2xl border border-neutral-200 bg-white/95 px-4 py-3 text-center shadow-lg backdrop-blur sm:left-6 sm:right-6 sm:px-5 sm:py-4">
