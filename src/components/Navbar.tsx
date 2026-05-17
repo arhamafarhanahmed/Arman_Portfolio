@@ -4,6 +4,7 @@ import { profile } from "../data/portfolio"
 
 const links = [
   { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "Work", href: "#portfolio" },
 ]
@@ -118,7 +119,7 @@ export default function Navbar() {
 
           <a
             href="#contact"
-            className="hidden rounded-xl bg-neutral-900 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-neutral-800 md:inline-flex"
+            className="hidden rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-800 md:inline-flex"
           >
             Hire me
           </a>
